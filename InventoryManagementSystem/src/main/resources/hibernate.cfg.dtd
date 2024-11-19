@@ -1,0 +1,6 @@
+<!ELEMENT hibernate-configuration (session-factory)>
+<!ELEMENT session-factory (property+,mapping+)>
+<!ELEMENT property (#PCDATA)>
+<!ATTLIST property name ID #REQUIRED>
+<!ELEMENT mapping EMPTY>
+<!ATTLIST mapping class NMTOKEN #REQUIRED>

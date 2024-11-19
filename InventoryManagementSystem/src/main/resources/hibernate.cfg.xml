@@ -1,0 +1,37 @@
+<!--<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 4.0//EN" 
+        "http://hibernate.sourceforge.net/hibernate-configuration-4.0.dtd"> -->
+<?xml-model href="hibernate.cfg.dtd"?>
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/inventory_db?useSSL=false</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Mysql@400</property>
+
+        <!-- JDBC connection pool settings -->
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">300</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+
+        <!-- Hibernate properties -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.show_sql">true</property> 
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="hibernate.current_session_context_class">thread</property>
+        
+        <!-- Mappings for each entity -->
+        <mapping class="com.inventory.model.Customer"/>
+        <mapping class="com.inventory.model.Order"/>
+        <mapping class="com.inventory.model.OrderDetail"/>
+        <mapping class="com.inventory.model.Supplier"/>
+        <mapping class="com.inventory.model.Product"/>
+        <mapping class="com.inventory.model.Category"/>
+        <mapping class="com.inventory.model.Inventory"/>
+
+        
+    </session-factory>
+</hibernate-configuration>
