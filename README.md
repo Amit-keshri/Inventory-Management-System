@@ -1,2 +1,2 @@
 # Inventory-Management-System
-Inventory Management System using Maven, Hibernate, Java, MySQL, JDBC
+Inventory Management System using Maven, Hibernate, Java.
